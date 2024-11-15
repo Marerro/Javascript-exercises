@@ -64,4 +64,46 @@ const monthFunction = (date) => {
 }
 
 const myDate = new Date('2005-06-30');
-console.log(monthFunction(myDate));
+console.log(monthFunction(myDate)); // Output: June
+
+const menesiai = (dateString) => {
+    const months = [   "January", "February", "March", "April", "May", "June",   "July", "August", "September", "October", "November", "December" ];
+    const now = new Date(dateString);
+    const monthIndex = now.getMonth();
+    return months [monthIndex];
+}
+
+console.log(menesiai("2015-07-20")); // Output: July
+
+const nustatytiValandas = (hour) => {
+    const date = new Date();
+    date.setHours(hour);
+    return date;
+}
+
+console.log(nustatytiValandas(18)); // Output: 2024-11-15T16:26:21.784Z
+
+const nustatytiMenesi = (menesis) => {
+    const data = new Date();
+    data.setMonth(menesis);
+    return data;
+}
+
+console.log(nustatytiMenesi(6)) // Output: 2024-07-15T09:26:21.784Z
+
+const datePicker = () => {
+
+    const iskvietimas1 = prompt("Įveskite pirma data:");
+    const iskvietimas2 = prompt("Įveskite antra data:");
+
+    const date1 = new Date(iskvietimas1);
+    const date2 = new Date(iskvietimas2);
+    if(date1 < date2) {
+        return `Pasirinkta data ${date1.toDateString()} yra mazesne nei ${date2.toDateString()}`;
+    } else {
+        return `Pasirinkta data ${date1.toDateString()} yra didesne nei ${date2.toDateString()}`;
+    }
+}
+
+const datosresultatas = datePicker()
+alert(datosresultatas);
