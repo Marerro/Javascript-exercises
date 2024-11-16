@@ -3,14 +3,14 @@ const getMonth = (months) => {
 }
 
 const dateFunction = (output) => {
-    let date = new Date('2020-04-31');
-    let date1 = new Date('')
+    const date = new Date('2020-04-31');
+    const date1 = new Date('')
 }
 
 //  Timestamp gavimas 
 
-let birthdatetoStamp = new Date('2000-06-26');
-let timestamp = birthdatetoStamp.getTime();
+const birthdatetoStamp = new Date('2000-06-26');
+const timestamp = birthdatetoStamp.getTime();
 console.log(timestamp);
 
 // Output: 961977600000
@@ -25,8 +25,8 @@ console.log(result);
 
 // Output: 2000-06-26T00:00:00.000Z
 
-let personstamp = new Date("1998-04-23");
-let stampPerson = personstamp.getTime();
+const personstamp = new Date("1998-04-23");
+const stampPerson = personstamp.getTime();
 console.log(stampPerson);
 
 // Output: 893289600000
@@ -107,3 +107,10 @@ const datePicker = () => {
 
 const datosresultatas = datePicker()
 alert(datosresultatas);
+
+const elem = document.getElementById('elems')
+console.log(elem);
+
+
+
+
